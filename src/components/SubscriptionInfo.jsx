@@ -1,16 +1,13 @@
 function SubscriptionInfo({subscription}) {
     const statusClass = subscription.isActive
-        ? "subscription-info dash-box active"
-        : "subscription-info dash-box inactive";
+        ? "status active" : "status inactive";
 
     return (
-        <div className={statusClass}>
-            <h3>Моя подписка</h3>
-            <p>Статус подписки: {subscription.isActive
-                ? "Активна"
-                : "Неактивна"}
-            </p>
-            <p>Дата окончания подписки: {subscription.expiresAt}</p>        </div>
+        <div className={"subscription-info dash-box"}>
+            <h2>Моя подписка</h2>
+            <p>Дата окончания: {subscription.expiresAt}</p>
+            <span className={statusClass}>{subscription.isActive ? "Активна" : "Неактивна"}</span>
+        </div>
     )
 }
 

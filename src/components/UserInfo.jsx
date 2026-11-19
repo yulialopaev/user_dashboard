@@ -1,9 +1,8 @@
 function UserInfo({user}) {
     return (
         <div className={"user-info"}>
-            <h3>Здравствуйте, {user.name}!</h3>
+            <h2>Здравствуйте, {user.name}!</h2>
             <p>Электронная почта: {user.email}</p>
-
         </div>
     )
 }

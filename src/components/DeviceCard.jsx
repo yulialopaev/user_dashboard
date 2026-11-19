@@ -1,8 +1,10 @@
 function DeviceCard({device}) {
+
     return (
-        <div className="device-card">
-            <p className={"device-title"}>{device.name}</p>
+        <div>
+            <h3>{device.name}</h3>
             <p className={"device-type"}>Тип: {device.type}</p>
+
         </div>
     )
 }

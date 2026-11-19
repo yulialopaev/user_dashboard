@@ -5,17 +5,19 @@ import SubscriptionInfo from "./components/SubscriptionInfo.jsx";
 import {subscription} from "./data/subscription.js";
 import DeviceList from "./components/DeviceList.jsx";
 import {initialDevices} from "./data/devices.js";
+import Header from "./components/Header.jsx";
+
 
 function App() {
 
 
     return (
-        <>
-            <h1>Мой личный кабинет</h1>
+        <div className={"main"}>
+            <Header/>
             <UserInfo user={user}/>
             <SubscriptionInfo subscription={subscription}/>
-            <DeviceList devices={initialDevices}/>
-        </>
+            <DeviceList initialDevices={initialDevices}/>
+        </div>
     )
 }
 
